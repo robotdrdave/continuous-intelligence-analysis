@@ -8,6 +8,13 @@ data = pd.read_csv("/Users/robotdrdave/git/continuous-intelligence-workshop/data
 
 print("Data has ", len(data), " entries")
 print("Column names: ", data.columns)
+plt.hist(data_modified['unit_sales'], bins=range(0,1000,20))
+plt.xlabel('Unit Sales')
+plt.ylabel('Count')
+plt.title('Distribution of Unit Sales')
+plt.savefig('/Users/robotdrdave/Documents/test.png')
+plt.close()
 
 with tracking.track() as track:
         track.log_params({'metrics': str(data.describe().to_dict())})
+        track.log_artifact('/Users/robotdrdave/Documents/test.png')
