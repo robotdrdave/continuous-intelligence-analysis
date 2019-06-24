@@ -7,3 +7,5 @@ data = pd.read_csv("/Users/robotdrdave/git/continuous-intelligence-workshop/data
 
 print("Data has ", len(data), " entries")
 print("Column names: ", data.columns)
+with tracking.track() as track:
+        track.log_params(data.describe())
