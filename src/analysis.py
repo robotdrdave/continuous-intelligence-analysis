@@ -17,4 +17,4 @@ plt.close()
 
 with tracking.track() as track:
         track.log_params({'metrics': str(data.describe().to_dict())})
-        track.log_artifact('/Users/robotdrdave/Documents/test.png')
+        track.log_graph('/Users/robotdrdave/Documents/test.png')
