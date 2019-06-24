@@ -10,4 +10,4 @@ print("Data has ", len(data), " entries")
 print("Column names: ", data.columns)
 
 with tracking.track() as track:
-        track.log_metrics({'metrics': str(data.describe().to_dict())})
+        track.log_params({'metrics': str(data.describe().to_dict())})
