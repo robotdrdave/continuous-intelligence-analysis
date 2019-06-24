@@ -8,7 +8,7 @@ data = pd.read_csv("/Users/robotdrdave/git/continuous-intelligence-workshop/data
 
 print("Data has ", len(data), " entries")
 print("Column names: ", data.columns)
-plt.hist(data_modified['unit_sales'], bins=range(0,1000,20))
+plt.hist(data['unit_sales'], bins=range(0,1000,20))
 plt.xlabel('Unit Sales')
 plt.ylabel('Count')
 plt.title('Distribution of Unit Sales')
