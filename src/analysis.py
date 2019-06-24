@@ -2,6 +2,7 @@ import tracking
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 data = pd.read_csv("/Users/robotdrdave/git/continuous-intelligence-workshop/data/raw/store47-2016.csv")
 
