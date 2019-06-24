@@ -8,4 +8,4 @@ data = pd.read_csv("/Users/robotdrdave/git/continuous-intelligence-workshop/data
 print("Data has ", len(data), " entries")
 print("Column names: ", data.columns)
 with tracking.track() as track:
-        track.log_params([{'metric1': '0.123'}, {'metric2': '0.456'}])
+        track.log_params({'param1': '0.123', 'param2': '0.456'})
