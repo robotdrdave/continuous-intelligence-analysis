@@ -30,5 +30,5 @@ mlflow.set_experiment(TENANT)
 mlflow.start_run(run_name=RUN_LABEL)
 
 mlflow.log_param('metrics', str(data.describe().to_dict()))
-mlflow.log_artifact('/Users/robotdrdave/Documents/Experiment_Artifacts/test.png')
+mlflow.log_artifacts('/Users/robotdrdave/Documents/go-agent-19.5.0/pipelines/analysis/mlruns')
 mlflow.end_run()
