@@ -27,5 +27,5 @@ mlflow.set_tracking_uri(uri=MLFLOW_TRACKING_URL)
 mlflow.set_experiment(TENANT)
 mlflow.start_run(run_name=RUN_LABEL)
 
-mlflow.log_params({'metrics': str(data.describe().to_dict())})
-mlflow.log_graph('/Users/robotdrdave/Documents/test.png')
+mlflow.log_param({'metrics': str(data.describe().to_dict())})
+mlflow.log_artifact('/Users/robotdrdave/Documents/test.png')
