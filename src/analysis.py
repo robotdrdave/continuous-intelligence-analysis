@@ -30,5 +30,5 @@ mlflow.set_experiment('histogram2')
 mlflow.start_run(run_name=RUN_LABEL)
 
 mlflow.log_param('metrics', str(data.describe().to_dict()))
-mlflow.log_artifacts('/Users/robotdrdave/Documents/Experiment_Artifacts')
+mlflow.log_artifact('/Users/robotdrdave/Documents/Experiment_Artifacts/test.png')
 mlflow.end_run()
