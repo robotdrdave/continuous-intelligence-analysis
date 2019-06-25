@@ -28,4 +28,4 @@ mlflow.set_experiment(TENANT)
 mlflow.start_run(run_name=RUN_LABEL)
 
 mlflow.log_param('metrics', str(data.describe().to_dict()))
-mlflow.log_artifact('/Users/robotdrdave/Documents/test.png')
+mlflow.log_artifact('/Users/robotdrdave/Documents/test.png', '/Users/robotdrdave/Documents/Experiment Artifacts')
