@@ -26,7 +26,7 @@ RUN_LABEL = os.getenv('GO_PIPELINE_LABEL', '0')
 mlflow.set_tracking_uri(uri=MLFLOW_TRACKING_URL)
 #mlflow.create_experiment('histogram', '/Users/robotdrdave/Documents/go-agent-19.5.0/pipelines/analysis/mlruns')
 
-mlflow.set_experiment(TENANT)
+mlflow.set_experiment('histogram')
 mlflow.start_run(run_name=RUN_LABEL)
 
 mlflow.log_param('metrics', str(data.describe().to_dict()))
