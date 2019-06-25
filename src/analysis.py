@@ -13,7 +13,7 @@ plt.hist(data['unit_sales'], bins=range(0,1000,20))
 plt.xlabel('Unit Sales')
 plt.ylabel('Count')
 plt.title('Distribution of Unit Sales')
-plt.savefig('/Users/robotdrdave/Documents/test.png')
+plt.savefig('/Users/robotdrdave/Documents/Experiment_Artifacts/test.png')
 plt.close()
 
 #with tracking.track() as track:
@@ -26,6 +26,8 @@ RUN_LABEL = os.getenv('GO_PIPELINE_LABEL', '0')
 mlflow.set_tracking_uri(uri=MLFLOW_TRACKING_URL)
 mlflow.set_experiment(TENANT)
 mlflow.start_run(run_name=RUN_LABEL)
+mlflow.create_experiment('histogram', '/Users/robotdrdave/Documents/Experiment_Artifacts/')
 
 mlflow.log_param('metrics', str(data.describe().to_dict()))
-mlflow.log_artifact('/Users/robotdrdave/Documents/test.png', '/Users/robotdrdave/Documents/Experiment Artifacts')
+mlflow.log_artifact('/Users/robotdrdave/Documents/Experiment_Artifacts/test.png')
+mlflow.end_run()
